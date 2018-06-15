@@ -35,7 +35,7 @@ export class EmployeeComponent implements OnInit {
             $key: null,
             urlname: '',
             login: '',
-            password: 0,
+            password: '',
             image: ''
         };
     }

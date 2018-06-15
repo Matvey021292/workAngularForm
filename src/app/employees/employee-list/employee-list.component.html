@@ -1,29 +1,22 @@
-<div class="col-md-6 mb-4" *ngFor="let employee of employeeList">
-    <ul class="list-group">
-        <li class="list-group-item"><h2 class="text-uppercase">{{employee.urlname}}</h2></li>
-        <li class="list-group-item">{{employee.login}}</li>
-        <li class="list-group-item">{{employee.password}}</li>
-        <li class="list-group-item d-flex justify-content-center align-items-center"><img style="max-width: 150px;"
-                                                                                          class="w-100"
-                                                                                          src="{{employee.image}}"
-                                                                                          alt=""></li>
-        <li  class="list-group-item">
-            <div class="container">
-                <div class="row align-items-center justify-content-center">
-                    <div class="col-md-6 pl-0  text-center">
-                        <button class="btn btn-outline-danger" (click)="onDelete(employee.$key)">
-                            <i class="fa fa-trash-o" aria-hidden="true"></i>
-                        </button>
+<div class="col-md-5 mb-4 list-group" *ngFor="let employee of employeeList">
+    <ul class=" list-group-item h-100">
+        <h2 class="text-uppercase">{{employee.urlname}}</h2>
+        <hr>
+        <p><i class="fa fa-user" aria-hidden="true"></i> {{employee.login}}</p>
+        <p><i class="fa fa-unlock-alt" aria-hidden="true"></i> {{employee.password}}</p>
+        <hr>
+        <img style="max-width: 150px;"
+             src="{{employee.image}}"
+             alt="">
+        <hr>
 
-                    </div>
-                    <div class="col-md-6 pr-0 text-center">
-                        <button class="btn btn-outline-success" (click)="onEdit(employee)">
-                            <i class="fa fa-refresh" aria-hidden="true"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
+        <button class="btn btn-outline-danger" (click)="onDelete(employee.$key)">
+            <i class="fa fa-trash-o" aria-hidden="true"></i>
+        </button>
 
-        </li>
+        <button class="btn btn-outline-success" (click)="onEdit(employee)">
+            <i class="fa fa-refresh" aria-hidden="true"></i>
+        </button>
+
     </ul>
 </div>

@@ -2,6 +2,6 @@ export class Employee {
     $key: string;
     urlname: string;
     login: string;
-    password: number;
+    password: string;
     image: string;
 }

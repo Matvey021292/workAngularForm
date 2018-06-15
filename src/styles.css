@@ -1,3 +1,7 @@
 input.ng-invalid.ng-dirty{
     border: 1px solid tomato;
 }
+.list-group-item img{
+    height: 80px;
+    object-fit: cover;
+}
